@@ -11,10 +11,18 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+// data is the string of user input to terminal prompts passed in, and is an object of the format { key : value }
 function generateMarkdown(data) {
-  return `# ${data.title}
+  var key = Object.keys[0];
+  var value = Object.values( data )[0];
+  switch ( key ) {
+    case 'username':
 
-`;
+  }
+  return `# ${data.title}
+  
+  
+  `;
 }
 
 // function tester() {
