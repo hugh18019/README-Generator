@@ -11,21 +11,22 @@ const questions = [ 'What is your Github username? ', 'What is your email addres
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     // Pass data to generateMarkDownFn() to get markdown code
-    // generateMarkDownFn( data );
+    var mdData = generateMarkDownFn( data );
+    console.log( mdData );
+    // console.log( data );
 
-    console.log( data );
 
-
-    // fs.appendFile( fileName, data, err => {
-    //     if( err ) {
-    //         console.error( err );
-    //         return;
-    //     }
-    // } )
+    fs.appendFile( fileName, `${mdData}\n`, err => {
+        if( err ) {
+            console.error( err );
+            return;
+        }
+    } )
 }
 
 // TODO: Create a function to initialize app
 async function init() {
+    // clearFile();
     var promptName;
     var question;
     var inputType;
@@ -33,12 +34,12 @@ async function init() {
     for( let each of questions ) {
         switch( each ) {
             case 'What is your Github username? ' :
-                console.log( 'got here' );
+                // console.log( 'got here' );
                 promptName = 'username';
                 question = each,
                 inputType = 'input'
                 break;
-            case 'what is your email address? ' :
+            case 'What is your email address? ' :
                 promptName = 'email_address';
                 question = each,
                 inputType = 'input'
@@ -54,21 +55,18 @@ async function init() {
                 inputType = 'input'
                 break;
         }
+        console.log( `${promptName}` );
         const getAnswer = await inquirer.prompt([
             {
                 name: `${promptName}`,
                 message: `${each}`,
-                type: `${inputType}`
+                inputType: `${inputType}`
             }
         ])
         .then( ( answer )  => {
-            console.log( answer );
+            writeToFile( 'README.md', answer );
+            // console.log( answer );
         })
-        // .then( ( answer ) => {
-        //     console.log( answer );
-        // })
-        // console.log( getAnswer.name );
-        // writeToFile( getAnswer );
     }
 
 }
@@ -78,7 +76,9 @@ init();
 
 
 
-
+function clearFile() {
+    fs.writeFile('./README.md', '', );
+}
 
 
 
