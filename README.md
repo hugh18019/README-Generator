@@ -1,12 +1,12 @@
-## h 
-  h
+## README-Generator 
+  It's an application that generates a README file based on user input
 
   ## Installation
   Run the following command to install all dependencies.
-  > h
+  > npm i
 
   Run the following command to install the required inquirer package.
-  > h
+  > npm i inquirer
 
   ## Usage
   First navigate to the root of the project directory.
@@ -16,8 +16,8 @@
   ![alt text](assets/images/usage.png)
 
   ## Contributors
-  > h 
-  > h
+  > hugh18019 
+  > hugh80082@gmail.com
   
   ## License
   > ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

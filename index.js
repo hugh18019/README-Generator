@@ -12,7 +12,7 @@ const questions = [
 'Please write a short description of your project ',
 'What kind of license should your project have? ', 
 'What command should be run to install dependencies? ',
-'What other packages are needed to use the application? ',
+'What command should be run to install other packages needed to use the application? ',
 ];
 
 
