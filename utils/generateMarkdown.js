@@ -1,61 +1,87 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if( license === 'none' ) {
+    return "";
+  }
+  switch ( license ) {
+    case 'MIT':
+      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
+      break;
+    case 'APACHE 2.0':
+      return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
+      break;
+    case 'GPL 3.0':
+      return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)"
+      break;
+    case 'BSD 3':
+      return "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)"
+      break;
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if( license === 'none' ) {
+    return "";
+  }
+  switch ( license ) {
+    case 'MIT':
+      return "https://opensource.org/licenses/MIT"
+      break;
+    case 'APACHE 2.0':
+      return "https://opensource.org/licenses/Apache-2.0"
+      break;
+    case 'GPL 3.0':
+      return "https://www.gnu.org/licenses/gpl-3.0"
+      break;
+    case 'BSD 3':
+      return "https://opensource.org/licenses/BSD-3-Clause"
+      break;
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  console.log( license );
+  var licenseBadge = renderLicenseBadge( license );
+  var licenseLink = renderLicenseLink( license );
+  return `${ licenseBadge }
+  ${ licenseLink }`;
+}
 
 // TODO: Create a function to generate markdown for README
 // data is the string of user input to terminal prompts passed in, and is an object of the format { key : value }
 function generateMarkdown(data) {
-  console.log( data );
 
-  var key = Object.keys( data )[0];
-  var value = Object.values( data )[0];
-  console.log( Object.values( data ) );
+  let { username, email, title, description, license, dependencies, packages } = data;
 
-  if( `${key}` != 'username' && `${key}` != 'email_address' ) {
-    if( `${key}` == 'project_name' ) {
-      return `# ${ value }`;
-    }
-    if( `${key}` == 'description' ) {
-      return `${ value }`;
-    }
-    if( `${key}` == 'dependencies' ) {
-      return `# Installation 
-      ${ value }`
-    }
-    if( `${key}` == 'packages' ) {
-      return 
-    }
+  var licenseSection = renderLicenseSection( license );
+  title = title.trim().split(' ').join('-');
 
-    return `# ${ key } 
-    ${ value }`;
+  return `## ${ title } 
+  ${description}
+
+  ## Installation
+  Run the following command to install all dependencies.
+  > ${ dependencies }
+  Run ${ packages } to install the required inquirer package.
+  > ${ packages }
+
+  ## Contributors
+  > ${ username } ${ email }
+  
+  ## License
+  > ${ licenseSection }
+
+  `;
+
+
+
   }
   
-
-  
-
-  // switch ( key ) {
-  //   case 'description':
-  //     return `# ${value}`;
-  //     break;
-    // }
-  
-  // return `# ${data.title}
-  
-  
-  // `;
-}
-
-// function tester() {
-//   console.log( "got here" );
-// }
 
 
 module.exports = generateMarkdown;

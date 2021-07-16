@@ -8,17 +8,24 @@ const fs = require( 'fs' );
 const questions = [ 
 'What is your Github username? ', 
 'What is your email address? ', 
-'What is your project "name"? ', 
+'What is your project name? ', 
 'Please write a short description of your project ',
 'What kind of license should your project have? ', 
 'What command should be run to install dependencies? ',
 'What other packages are needed to use the application? ',
 ];
 
+
+function clearFile() {
+    fs.writeFile('./README.md', '', function(){} );
+}
+
+
 function writeToFile( filename, data ) {
+    clearFile();
     var mdData = generateMarkDownFn( data );
 
-    fs.writeFile( fileName, `${mdData}`, err => {
+    fs.writeFile( filename, `${mdData}`, err => {
         if( err ) {
             console.error( err );
             return;
@@ -66,7 +73,7 @@ inquirer.prompt ( [
     }   
 ])
 .then( (answer) => {
-    console.log( answer );
+    writeToFile( './README.md', answer );
 })
 
 
