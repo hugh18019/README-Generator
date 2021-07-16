@@ -1,4 +1,8 @@
-undefined# email_address 
-    hugh80082@gmail.com# project_name 
-    moo# description 
-    adskfj;as
+# readme
+asdlkqf;ads
+# license 
+    MIT
+# dependencies 
+    npm i
+# packages 
+    npm inquirer

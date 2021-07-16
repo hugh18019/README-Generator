@@ -19,10 +19,26 @@ function generateMarkdown(data) {
   var value = Object.values( data )[0];
   console.log( Object.values( data ) );
 
-  if( `${key}` != 'username' ) {
+  if( `${key}` != 'username' && `${key}` != 'email_address' ) {
+    if( `${key}` == 'project_name' ) {
+      return `# ${ value }`;
+    }
+    if( `${key}` == 'description' ) {
+      return `${ value }`;
+    }
+    if( `${key}` == 'dependencies' ) {
+      return `# Installation 
+      ${ value }`
+    }
+    if( `${key}` == 'packages' ) {
+      return 
+    }
+
     return `# ${ key } 
     ${ value }`;
   }
+  
+
   
 
   // switch ( key ) {
