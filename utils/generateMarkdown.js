@@ -45,7 +45,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  console.log( license );
+
   var licenseBadge = renderLicenseBadge( license );
   var licenseLink = renderLicenseLink( license );
   return `${ licenseBadge }
@@ -56,7 +56,11 @@ function renderLicenseSection(license) {
 // data is the string of user input to terminal prompts passed in, and is an object of the format { key : value }
 function generateMarkdown(data) {
 
-  let { username, email, title, description, license, dependencies, packages } = data;
+  var { username, email_address, title, description, license, dependencies, packages } = data;
+  console.log( data );
+  console.log( username );
+  console.log( email_address );
+  console.log( title );
 
   var licenseSection = renderLicenseSection( license );
   title = title.trim().split(' ').join('-');
@@ -67,11 +71,20 @@ function generateMarkdown(data) {
   ## Installation
   Run the following command to install all dependencies.
   > ${ dependencies }
-  Run ${ packages } to install the required inquirer package.
+
+  Run the following command to install the required inquirer package.
   > ${ packages }
 
+  ## Usage
+  First navigate to the root of the project directory.
+  Then run the command "node index.js".
+  Then answer each prompt.
+
+  ![alt text](assets/images/usage.png)
+
   ## Contributors
-  > ${ username } ${ email }
+  > ${ username } 
+  > ${ email_address }
   
   ## License
   > ${ licenseSection }
