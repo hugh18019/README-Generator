@@ -72,6 +72,7 @@ function generateMarkdown(data) {
   [Installation](#Installation)  
   [Usage](#Usage)  
   [Contributors](#Contributors)  
+  [Link to a Video Demo](#Demo)  
   [License](#License)
 
   <a name="Installation"></a>
@@ -95,6 +96,10 @@ function generateMarkdown(data) {
   > ${ username }  
   > Email: ${ email_address }
   
+  <a name="Demo"></a>
+  ## Link to a Video Demo  
+  > https://drive.google.com/file/d/1T2WfEt4MbN9mIdMw1UvDNP_6WnWt-Kn-/view?usp=sharing
+
   <a name="License"></a>
   ## License  
   > ${ licenseSection }
