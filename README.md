@@ -1,36 +1,35 @@
-## README-Generator
+## README-Generator 
+  It's an application that generates a README.md file based on input from the user.
 
-It's an application that takes several user inputs and generates a README.md file based on those inputs.
+  ### Table of Contents
+  [Installation](#Installation)  
+  [Usage](#Usage)  
+  [Contributors](#Contributors)  
+  [License](#License)
 
-### Table of Contents
+  <a name="Installation"></a>
+  ## Installation
+  Run the following command to install all dependencies.
+  > npm i
 
-[Installation](#Installation)
-[Usage](#Usage)
-[Contributors](#Contributors)
-[License](#License);
+  Run the following command to install the required inquirer package.
+  > npm i inquirer
 
-## Installation <a name="Installation"></a>
+  <a name="Usage"></a>
+  ## Usage
+  First navigate to the root of the project directory.
+  Then run the command "node index.js".
+  Then answer each prompt.
 
-Run the following command to install all dependencies.
+  ![alt text](assets/images/usage.png)
 
-> npm i
+  <a name="Contributors"></a>
+  ## Contributors
+  > hugh18019  
+  > Email: hugh80082@gmail.com
+  
+  <a name="License"></a>
+  ## License  
+  > ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)   https://opensource.org/licenses/MIT
 
-Run the following command to install the required inquirer package.
-
-> npm i inquirer
-
-## Usage <a name="Usage"></a>
-
-First navigate to the root of the project directory.
-Then run the command "node index.js".
-Then answer each prompt.
-
-![alt text](assets/images/usage.png)
-
-## Contributors <a name="Contributors"></a>
-
-> hugh18019 > hugh80082@gmail.com
-
-## License <a name="License"></a>
-
-> ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) https://opensource.org/licenses/MIT
+  

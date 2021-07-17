@@ -69,12 +69,12 @@ function generateMarkdown(data) {
   ${description}
 
   ### Table of Contents
-  [Installation](#Installation)
-  [Usage](#Usage)
-  [Contributors](#Contributors)
-  [License](#License);
+  [Installation](#Installation)  
+  [Usage](#Usage)  
+  [Contributors](#Contributors)  
+  [License](#License)
 
-  <a name="Installation></a>
+  <a name="Installation"></a>
   ## Installation
   Run the following command to install all dependencies.
   > ${ dependencies }
@@ -82,7 +82,7 @@ function generateMarkdown(data) {
   Run the following command to install the required inquirer package.
   > ${ packages }
 
-  <a name="Usage></a>
+  <a name="Usage"></a>
   ## Usage
   First navigate to the root of the project directory.
   Then run the command "node index.js".
@@ -90,13 +90,13 @@ function generateMarkdown(data) {
 
   ![alt text](assets/images/usage.png)
 
-  <a name="Contributors></a>
+  <a name="Contributors"></a>
   ## Contributors
-  > ${ username } \
-  > ${ email_address }
+  > ${ username }  
+  > Email: ${ email_address }
   
   <a name="License"></a>
-  ## License
+  ## License  
   > ${ licenseSection }
 
   `;
