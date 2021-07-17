@@ -48,7 +48,7 @@ function renderLicenseSection(license) {
 
   var licenseBadge = renderLicenseBadge( license );
   var licenseLink = renderLicenseLink( license );
-  return `${ licenseBadge }
+  return `${ licenseBadge } \
   ${ licenseLink }`;
 }
 
@@ -68,6 +68,13 @@ function generateMarkdown(data) {
   return `## ${ title } 
   ${description}
 
+  ### Table of Contents
+  [Installation](#Installation)
+  [Usage](#Usage)
+  [Contributors](#Contributors)
+  [License](#License);
+
+  <a name="Installation></a>
   ## Installation
   Run the following command to install all dependencies.
   > ${ dependencies }
@@ -75,6 +82,7 @@ function generateMarkdown(data) {
   Run the following command to install the required inquirer package.
   > ${ packages }
 
+  <a name="Usage></a>
   ## Usage
   First navigate to the root of the project directory.
   Then run the command "node index.js".
@@ -82,10 +90,12 @@ function generateMarkdown(data) {
 
   ![alt text](assets/images/usage.png)
 
+  <a name="Contributors></a>
   ## Contributors
-  > ${ username } 
+  > ${ username } \
   > ${ email_address }
   
+  <a name="License"></a>
   ## License
   > ${ licenseSection }
 
