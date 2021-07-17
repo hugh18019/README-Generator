@@ -68,12 +68,19 @@ function generateMarkdown(data) {
   return `## ${ title } 
   ${description}
 
-  ### Table of Contents
+  <a name="License"></a>
+  ## License  
+  > ${ licenseSection }  
+  > This application is covered under the ${license} license.  
+
+  ## Table of Contents
+  [License](#License)
   [Installation](#Installation)  
   [Usage](#Usage)  
   [Contributors](#Contributors)  
   [Link to a Video Demo](#Demo)  
-  [License](#License)
+  [Questions](#Questions) 
+  
 
   <a name="Installation"></a>
   ## Installation
@@ -94,15 +101,15 @@ function generateMarkdown(data) {
   <a name="Contributors"></a>
   ## Contributors
   > ${ username }  
-  > Email: ${ email_address }
-  
+
   <a name="Demo"></a>
   ## Link to a Video Demo  
   > https://drive.google.com/file/d/1T2WfEt4MbN9mIdMw1UvDNP_6WnWt-Kn-/view?usp=sharing
 
-  <a name="License"></a>
-  ## License  
-  > ${ licenseSection }
+  <a name="Questions"></a>
+  ## Questions
+  > For questions reach ${ username }  at: ${ email_address }  
+  > Here's the link to my Github profile: https://github.com/hugh18019
 
   `;
 
