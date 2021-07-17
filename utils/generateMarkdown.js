@@ -48,7 +48,7 @@ function renderLicenseSection(license) {
 
   var licenseBadge = renderLicenseBadge( license );
   var licenseLink = renderLicenseLink( license );
-  return `${ licenseBadge } \
+  return `${ licenseBadge }  
   ${ licenseLink }`;
 }
 

@@ -1,5 +1,5 @@
 ## README-Generator 
-  It's an application that generates a README.md file based on input from the user.
+  It's an application that makes use of the inquirer package to retrieve input from the user and generates markdown data based on the input and writes that data to the README.md file, creating a README file for the user.
 
   ### Table of Contents
   [Installation](#Installation)  
@@ -30,6 +30,7 @@
   
   <a name="License"></a>
   ## License  
-  > ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)   https://opensource.org/licenses/MIT
+  > ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+  https://opensource.org/licenses/MIT
 
   

@@ -15,12 +15,13 @@ const questions = [
 'What command should be run to install other packages needed to use the application? ',
 ];
 
-
+// A function that clears out content in the README.md file
 function clearFile() {
     fs.writeFile('./README.md', '', function(){} );
 }
 
-
+// A function that takes user input data and passes it to the generateMarkDownFn to generate some markdown data.
+// Then it writes the returned data to the README.md file.
 function writeToFile( filename, data ) {
     clearFile();
     var mdData = generateMarkDownFn( data );
@@ -33,6 +34,7 @@ function writeToFile( filename, data ) {
     })
 }
 
+// Using the inquirer package to prompt the user for some input
 inquirer.prompt ( [
    {
        name: 'username',
